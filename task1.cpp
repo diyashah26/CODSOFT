@@ -7,9 +7,8 @@ int main(){
 srand(time(0));
 cout<<"welcome to number guessing game!\nIn this,you need to guess number (btw 1 to 100) until you reach the final one\nso let's see your guessing power"<<endl;
 int num;
-//int random=rand() % 100 + 1;
+int random=rand() % 100 + 1;
 //cout<<"num is "<<random<<endl;
-int random=20;
 while(num>=0){
     cout<<"enter number: ";
     cin>>num;
