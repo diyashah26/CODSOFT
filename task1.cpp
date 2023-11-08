@@ -1,12 +1,16 @@
 //number guessing game
+#include<cstdlib>
 #include<iostream>
 #include<ctime>
-#include<cstdlib>
 using namespace std;
+
 int main(){
-    cout<<"welcome to number guessing game!\nIn this,you need to guess number until you reach the final one\nso let's see your guessing power"<<endl;
+    srand(time(0));
+    cout<<"welcome to number guessing game!\nIn this,you need to guess number (btw 1 to 100) until you reach the final one\nso let's see your guessing power"<<endl;
     int num;
-    int random=63;
+    //srand(time(0));
+    int random=rand() % 100 + 1;
+  //  cout<<"num is "<<random<<endl;
     while(num>=0){
         cout<<"enter a number: ";
         cin>>num;
@@ -23,16 +27,22 @@ int main(){
         else if(num>(2*random)){
             cout<<"oops! too high"<<endl;
         }
-        
+        else if((num>random && num<=(random+5)) || ((num<random && num>=(random-5)))){
+            cout<<"too close!"<<endl;
+        }
         else if(num>(random/2) && num<(random-10)){
             cout<<"cool! you need to guess a higher value from the previous one"<<endl;
         }
         else if(num<(2*random) && num>(random+10)){
             cout<<"cool! you need to guess a lower value from the previous one"<<endl;
         }
-        else if(num>=(random-10) || num<=(random+10)){
-            cout<<"you are almost there"<<endl;
+        else if(num<(random-10) && num>=(random-10)){
+            cout<<"you are almost there, guess a lower value"<<endl;
         }
+        else if(num<(random+10) && num>=(random+10)){
+            cout<<"you are almost there, guess a higher value"<<endl;
+        }
+        
         else{
             cout<<"wrong answer"<<endl;
         }
