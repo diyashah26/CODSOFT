@@ -71,7 +71,7 @@ game g;
 g.show();
 char rep;
 while(0==0){
-cout<<"would you like to play it again?"<<endl;
+cout<<"would you like to play it again?\n(enter y for yes and n for no)"<<endl;
     cin>>rep;
     if(rep=='y'){
         cout<<"great!"<<endl;

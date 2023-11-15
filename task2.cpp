@@ -1,4 +1,6 @@
 //simple calculator
+//made by diya shah
+//CODSOFT
 #include<iostream>
 using namespace std;
 class input{
