@@ -1,10 +1,17 @@
 //simple calculator
 #include<iostream>
 using namespace std;
-int main(){
+class input{
+    public:
     float num1,num2;
     string o;
+    void in(){
     cout<<"SIMPLE CALCULATOR\nPlease enter the operation you want to perform\nFor addition = 'add' or '+'\nFor subtraction = 'subtract' or '-'\nFor multiplication = 'multiply' or '*'\nFor division = 'divide' or '/'"<<endl;
+    }
+};
+class operation:public input{
+    public:
+    void out(){
     cout<<"enter first value: ";
     cin>>num1;
     cout<<"enter second value: ";
@@ -26,5 +33,21 @@ int main(){
     else{
     cout<<"wrong choice"<<endl;
     }
-    return 0; 
+}};
+int main(){
+    operation o;
+    o.in();
+    o.out();
+    while(0==0){
+    char n;
+    cout<<"Do you want to use calculator again?\n(enter y for yes and n for no)"<<endl;
+    cin>>n;
+    if(n=='y'){
+        o.out();
+    }
+    else{
+        cout<<"Cool, See you soon!";
+        break;
+    }}
+    return 0;
 }
