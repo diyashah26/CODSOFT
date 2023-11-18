@@ -3,15 +3,16 @@
 //CODSOFT
 #include<iostream>
 #include<vector>
-#include<string>
+#include<string.h>
 using namespace std;
 class addtask{
     public:
     string task;
     vector<string> todolist;
     void add(){
-        cout<<"enter task: "<<endl;
-        cin>>task;
+        cout<<"enter task: ";
+        cin.ignore();
+        getline(cin,task);
         todolist.emplace_back(task);
         cout<<"task added successfully!"<<endl;
         cout<<endl;
